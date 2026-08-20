@@ -6,14 +6,66 @@ a{text-decoration:none;color:inherit}
 .container{width:min(1140px,92%);margin:auto}
 .site-header{position:absolute;z-index:20;top:0;left:0;width:100%;color:#fff}
 .navbar{height:82px;display:flex;align-items:center}
-.brand{font-size:21px;font-weight:700;letter-spacing:.2px}
+.home:hover{
+    color:black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.what:hover{
+    color:black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.pro:hover{
+    color:black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.edu:hover{
+    color:black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.projects:hover{
+    color:black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.contact:hover{
+    color:black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.brand{font-size:30px;font-weight:700;letter-spacing:.2px}
 .nav-menu{margin-left:auto;display:flex;align-items:center;gap:23px;font-size:14px;font-weight:600}
 .nav-menu>a{opacity:.95;transition:.2s}.nav-menu>a:hover{opacity:.7}
 .social-links{display:flex;gap:13px;margin-left:8px}.social-links a{font-size:14px;width:31px;height:31px;border:1px solid rgba(255,255,255,.6);border-radius:50%;display:grid;place-items:center}
+
+.code-window:hover{
+   transform: scale(0.98);
+}
+
+.code-window:hover .red{
+    background-color: #ff5e56;
+}
+.code-window:hover .orange{
+    background-color: #febd2f;
+}
+.code-window:hover .green{
+    background-color: #27c940;
+}
+.resume-btn:hover{
+    box-shadow: 7px 7px 10px 0px #000000;
+}
+.resume-btn:active{
+    transform: scale(0.98);
+}
 .menu-toggle{display:none;margin-left:auto;background:none;border:0;width:38px}.menu-toggle span{display:block;height:2px;background:#fff;margin:6px}
 .hero,.blue-section{position:relative;overflow:hidden;background:linear-gradient(135deg,#1693ee 0%,#1465db 45%,#1833c4 100%);color:#fff}
 .hero{min-height:650px;padding-top:150px}
 .hero-content{position:relative;z-index:2}.hero-copy{width:57%;padding-bottom:170px}
+
 .hero-content {
   display: flex;
   align-items: center;
@@ -232,6 +284,11 @@ a{text-decoration:none;color:inherit}
 .blue-section{padding:70px 0 110px}.section-title-white,.section-title{display:flex;align-items:center;gap:18px;margin-bottom:28px}.section-title-white h2{font-size:43px}.section-icon{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#1685ef;box-shadow:var(--shadow);font-weight:800;font-size:22px}.card{background:#fff;border-radius:7px;box-shadow:var(--shadow);padding:30px}.education-card{max-width:620px}.education-card h3{color:#1685ef;font-size:18px;margin-bottom:5px}.education-card h4{color:var(--dark);font-size:15px;margin-bottom:14px}.badge{display:inline-block;border-radius:5px;padding:3px 9px;font-size:12px;margin-right:7px;color:#fff}.badge.blue{background:#1685ef}.badge.purple{background:#7a55d7}
 .cards-grid,.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}.experience-card{text-align:center}.experience-card img{width:128px;height:128px;object-fit:cover;border-radius:50%;box-shadow:var(--shadow);margin-bottom:12px}.experience-card h3{color:var(--dark);font-size:19px}.experience-card h4{font-size:15px;margin:4px 0;color:#32325d}.experience-card time{font-size:14px}.experience-card p,.feedback-card p,.project-card p{margin-top:18px;text-align:left;font-size:14px}.feedback-card{max-width:720px}.feedback-card h3{font-size:18px;color:var(--dark)}.feedback-card h4{font-size:14px;margin-top:2px}
 .project-card h3{font-size:21px;color:var(--dark)}.project-card p{min-height:88px}.demo{display:inline-block;background:#2dce89;color:#fff;padding:9px 15px;border-radius:5px;margin:14px 7px 0 0;font-weight:700;font-size:13px}.github-demo{background:#171515}
+
+.card:hover{
+    box-shadow: 0px 1px 17px 2px #1685ef;
+}
+
 .contact{padding:70px 0}.contact-grid{display:grid;grid-template-columns:2fr 1fr;align-items:center}.contact h2{font-size:38px}.contact p{margin-top:10px;font-size:16px}.location{margin:25px 0;font-size:35px}
 .profile-photo{
     width:350px;
@@ -256,3 +313,116 @@ a{text-decoration:none;color:inherit}
     max-width: 100%;
   }
 }
+
+/* =========================================
+   INTERACTIVE CUSTOM CURSOR
+========================================= */
+
+/* Hide default cursor */
+body {
+    cursor: none;
+}
+
+/* Cursor container */
+.custom-cursor {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 99999;
+}
+
+/* Small center dot */
+.cursor-dot {
+    position: fixed;
+    width: 7px;
+    height: 7px;
+    background: #ffffff;
+    border-radius: 50%;
+
+    left: 0;
+    top: 0;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+}
+
+/* =========================================
+   CURSOR ON WHITE BACKGROUND
+========================================= */
+
+.cursor-dot.blue-cursor {
+    background: #1176ee;
+}
+
+.cursor-ring.blue-cursor {
+    border-color: #1176ee;
+}
+
+.cursor-ring.blue-cursor.hover {
+    background: rgba(17, 118, 238, 0.12);
+    border-color: rgba(17, 118, 238, 0.65);
+}
+
+/* Outer cursor ring */
+.cursor-ring {
+    position: fixed;
+
+    width: 42px;
+    height: 42px;
+
+    left: 0;
+    top: 0;
+
+    border: 1.5px solid rgba(255,255,255,0.9);
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+
+    transition:
+        width 0.25s ease,
+        height 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.15s ease;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.cursor-ring.hover {
+    width: 65px;
+    height: 65px;
+
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================================
+   CLICK EFFECT
+========================================= */
+
+.cursor-ring.click {
+    transform: translate(-50%, -50%) scale(0.75);
+}
+
+
+/* =========================================
+   MOBILE / TOUCH DEVICES
+========================================= */
+
+@media (hover: none), (pointer: coarse) {
+
+    body {
+        cursor: auto;
+    }
+
+    .custom-cursor {
+        display: none;
+    }
+
