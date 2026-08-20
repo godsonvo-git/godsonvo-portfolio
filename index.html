@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Custom Interactive Cursor -->
+<div class="custom-cursor" aria-hidden="true">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+</div>
+
   <header class="site-header" id="top">
     <nav class="navbar container">
       <a class="brand" href="#top">Godson V O</a>
@@ -18,12 +25,12 @@
       </button>
 
       <div class="nav-menu" id="navMenu">
-        <a href="#top">Home</a>
-        <a href="#what-i-do">What I do</a>
-        <a href="#proficiency">Proficiency</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#top" class="home">Home</a>
+        <a href="#what-i-do" class="what">What I do</a>
+        <a href="#proficiency" class="pro">Proficiency</a>
+        <a href="#education" class="edu">Education</a>
+        <a href="#projects" class="projects">Projects</a>
+        <a href="#contact" class="contact">Contact</a>
         <div class="social-links">
           <a href="https://www.linkedin.com/in/godsonvo/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
           <a href="https://github.com/godsonvo-git" target="_blank" rel="noopener" aria-label="GitHub">G</a>
@@ -68,7 +75,7 @@
         <div class="what-grid">
           <div class="code-art" aria-hidden="true">
             <div class="code-window">
-              <div class="window-dots"><b></b><b></b><b></b></div>
+              <div class="window-dots"><b class="red"></b><b class="orange"></b><b class="green"></b></div>
               <div class="code-lines">
                 <span>&lt;div <em>class</em>=<strong>"developer"</strong>&gt;</span>
                 <span>&nbsp;&nbsp;&lt;h1&gt;Hello World&lt;/h1&gt;</span>
@@ -131,10 +138,10 @@
       <div class="container">
         <div class="section-title"><span class="section-icon">▣</span><h2>Projects</h2></div>
         <div class="projects-grid">
-          <article class="card project-card"><h3>Interactive Quiz App</h3><p>Created a browser-based quiz using HTML, CSS, and JavaScript, with dynamic question rendering and scoring. Added a leaderboard stored in SQL for tracking performance.</p></article>
-          <article class="card project-card"><h3>Responsive Portfolio Website</h3><p>Built a personal portfolio using HTML, CSS, and JavaScript, showcasing projects and skills with a responsive design. Implemented smooth navigation and interactive elements to enhance user experience.</p></article>
-          <article class="card project-card"><h3>Python Data Analyzer</h3><p>Built a simple script in Python to read CSV files and generate summary statistics (mean, median, mode). Used built-in libraries to keep dependencies minimal.</p></article>
-          <article class="card project-card"><h3>E-commerce Store</h3><p>Developed a full-stack ecommerce web application using React.js frontend and SQL database. Implemented product listings, shopping cart functionality, and secure checkout flow. Designed responsive UI with HTML, CSS, and JavaScript for seamless user experience across devices.</p></article>
+          <article class="card project-card" ><h3>Interactive Quiz App</h3><p>Created a browser-based quiz using HTML, CSS, and JavaScript, with dynamic question rendering and scoring. Added a leaderboard stored in SQL for tracking performance.</p></article>
+          <article class="card project-card" ><h3>Responsive Portfolio Website</h3><p>Built a personal portfolio using HTML, CSS, and JavaScript, showcasing projects and skills with a responsive design. Implemented smooth navigation and interactive elements to enhance user experience.</p></article>
+          <article class="card project-card" ><h3>Python Data Analyzer</h3><p>Built a simple script in Python to read CSV files and generate summary statistics (mean, median, mode). Used built-in libraries to keep dependencies minimal.</p></article>
+          <article class="card project-card" ><h3>E-commerce Store</h3><p>Developed a full-stack ecommerce web application using React.js frontend and SQL database. Implemented product listings, shopping cart functionality, and secure checkout flow. Designed responsive UI with HTML, CSS, and JavaScript for seamless user experience across devices.</p></article>
         </div>
       </div>
     </section>
