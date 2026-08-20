@@ -426,3 +426,18 @@ body {
         display: none;
     }
 
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    background: #172b4d;
+    color: rgba(255, 255, 255, 0.75);
+    align-items: center;
+    padding: 22px 0;
+    font-size: 13px;
+}
+.copyright{
+    display: flex;
+    align-items: center;
+}
