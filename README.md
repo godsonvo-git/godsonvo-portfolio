@@ -1,4 +1,4 @@
-# Godson V O — Personal Portfolio!
+# Godson V O — Personal Portfolio
 
 A modern, responsive personal portfolio website built from scratch using **HTML, CSS, and JavaScript**.
 
