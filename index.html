@@ -7,6 +7,13 @@
   <link rel="icon" type="image/x-icon" href="img/icon-1.png">
   <meta name="description" content="Frontend developer portfolio recreated using only HTML, CSS and JavaScript.">
   <link rel="stylesheet" href="style.css">
+  <!-- Boxicons CSS -->
+  <!-- Basic Icons -->
+  <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+  <!-- Filled Icons -->
+  <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+  <!-- Brand Icons -->
+  <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -33,7 +40,7 @@
         <a href="#contact" class="contact">Contact</a>
         <div class="social-links">
           <a href="https://www.linkedin.com/in/godsonvo/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-          <a href="https://github.com/godsonvo-git" target="_blank" rel="noopener" aria-label="GitHub">G</a>
+          <a id="github" href="https://github.com/godsonvo-git" target="_blank" rel="noopener" aria-label="GitHub"><img style="width: 20px; color: white;" src="img/github.png" alt=""></a>
         </div>
       </div>
     </nav>
@@ -52,9 +59,9 @@
           <div class="hero-socials">
             <a class="round-btn white" href="mailto:godsonvoofficial@gmail.com" aria-label="Email">✉</a>
             <a class="round-btn linkedin" href="https://www.linkedin.com/in/godsonvo/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-            <a class="round-btn github" href="https://github.com/godsonvo-git" target="_blank" rel="noopener noreferrer" aria-label="GitHub">G</a>
+            <a class="round-btn github" href="https://github.com/godsonvo-git" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img style="width: 25px;" src="img/github.png" alt=""></a>
           </div>
-          <a class="resume-btn" href="img/GODSON V O Resume V1.pdf" target="_blank" rel="noopener">▣ <span>See My Resume</span></a>
+          <a class="resume-btn" href="img/GODSON V O Resume V1.pdf" target="_blank" rel="noopener"><i class="bx bx-paperclip"></i><span>View My Resume</span></a>
         </div>
       <div class="hero-image">
       <img src="img/about.jpg" alt="Developer illustration">
@@ -136,7 +143,7 @@
 
     <section class="section" id="projects">
       <div class="container">
-        <div class="section-title"><span class="section-icon">▣</span><h2>Projects</h2></div>
+        <div class="section-title"><span class="section-icon"><i class="bx bx-gaming"></i></span><h2>Projects</h2></div>
         <div class="projects-grid">
           <article class="card project-card" ><h3>Interactive Quiz App</h3><p>Created a browser-based quiz using HTML, CSS, and JavaScript, with dynamic question rendering and scoring. Added a leaderboard stored in SQL for tracking performance.</p></article>
           <article class="card project-card" ><h3>Responsive Portfolio Website</h3><p>Built a personal portfolio using HTML, CSS, and JavaScript, showcasing projects and skills with a responsive design. Implemented smooth navigation and interactive elements to enhance user experience.</p></article>
@@ -154,7 +161,7 @@
           <div class="hero-socials">
             <a class="round-btn white" href="mailto:godsonvoofficial@gmail.com" aria-label="Email">✉</a>
             <a class="round-btn linkedin" href="https://www.linkedin.com/in/godsonvo/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-            <a class="round-btn github" href="https://github.com/godsonvo-git" target="_blank" rel="noopener" aria-label="GitHub">G</a>
+            <a class="round-btn github" href="https://github.com/godsonvo-git" target="_blank" rel="noopener" aria-label="GitHub"><img style="width: 25px;" src="img/github.png" alt=""></a>
             
           </div>
         </div>
@@ -162,10 +169,8 @@
       </div>
     </section>
   </main>
-<footer class="site-footer">
-  <div class="container">
-    <p class="copyright">&copy; 2026 Godson V O  All rights reserved.</p>
-  </div>
+<footer>
+  &copy; 2026 Godson V O  All rights reserved.
 </footer>
   <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
   <script src="script.js"></script>
