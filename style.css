@@ -166,9 +166,12 @@ a{text-decoration:none;color:inherit}
 }
 
 .github {
-    --btn-bg: #171515;
-    color: #fff;
+    --btn-bg: #fff;
 }
+#github{
+    background-color: white;
+}
+
 
 
 /* ================================
@@ -425,19 +428,30 @@ body {
     .custom-cursor {
         display: none;
     }
-
+}
 /* =========================================
    FOOTER
 ========================================= */
 
-.site-footer {
-    background: #172b4d;
-    color: rgba(255, 255, 255, 0.75);
-    align-items: center;
-    padding: 22px 0;
-    font-size: 13px;
-}
-.copyright{
+footer{
     display: flex;
+    justify-content: center;
     align-items: center;
+}
+#what-i-do h2{
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 20px 0px;
+}
+
+
+.education-card{
+    margin: 0px 0px 20px 0px;
+}
+
+#contact:hover{
+    color: white;
+    font-weight: normal;
 }
