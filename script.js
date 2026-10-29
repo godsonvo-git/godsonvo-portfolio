@@ -141,7 +141,3 @@ document.addEventListener("mousemove", (e) => {
     }
 
 });
-
- const yearNum = new Date().getFullYear()
- const year = document.getElementById("footerText")
-year.innerHTML = `&copy; ${yearNum} Godson V O. All rights reserved.`
