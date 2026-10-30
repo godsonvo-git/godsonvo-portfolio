@@ -3,43 +3,51 @@
 html{scroll-behavior:smooth}
 body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);line-height:1.65;background:#fff}
 a{text-decoration:none;color:inherit}
-.container{width:min(1140px,92%);margin:auto}
+.container{
+    width:min(1140px,92%);
+    margin:auto;
+}
 .site-header{position:absolute;z-index:20;top:0;left:0;width:100%;color:#fff}
-.navbar{height:82px;display:flex;align-items:center}
-.home:hover{
-    color:black;
-    font-size: 16px;
-    font-weight: bolder;
+.navbar{
+    height:auto;
+    display:flex;
+    align-items:center;
+    overflow: hidden;
 }
-.what:hover{
-    color:black;
-    font-size: 16px;
-    font-weight: bolder;
-}
-.pro:hover{
-    color:black;
-    font-size: 16px;
-    font-weight: bolder;
-}
-.edu:hover{
-    color:black;
-    font-size: 16px;
-    font-weight: bolder;
+/* NAV HOVER (no layout shift) */
+.nav-menu > a {
+  transition: color .2s ease, text-shadow .2s ease, opacity .2s ease;
 }
 
-.projects:hover{
-    color:black;
-    font-size: 16px;
-    font-weight: bolder;
-}
-.contact:hover{
-    color:black;
-    font-size: 16px;
-    font-weight: bolder;
+.home:hover,
+.what:hover,
+.pro:hover,
+.edu:hover,
+.projects:hover,
+.contact:hover {
+  color: black;
+  /* fake "bolder" look without changing the text width */
+  text-shadow: 0 0 .6px #000, 0 0 .6px #000;
 }
 .brand{font-size:30px;font-weight:700;letter-spacing:.2px}
-.nav-menu{margin-left:auto;display:flex;align-items:center;gap:23px;font-size:14px;font-weight:600}
-.nav-menu>a{opacity:.95;transition:.2s}.nav-menu>a:hover{opacity:.7}
+.nav-menu{
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    font-size:14px;
+    font-weight:600;
+    overflow: hidden;
+}
+.nav-menu>a{
+    opacity:.95;
+    transition:.2s;
+    overflow: hidden;
+}
+.nav-menu>a:hover{
+    opacity:.7;
+    overflow: hidden;
+}
 .social-links{display:flex;gap:13px;margin-left:8px}.social-links a{font-size:14px;width:31px;height:31px;border:1px solid rgba(255,255,255,.6);border-radius:50%;display:grid;place-items:center}
 
 .code-window:hover{
@@ -100,6 +108,40 @@ a{text-decoration:none;color:inherit}
   display: block;
 }
 .hero h1{font-size:48px;line-height:1.15;margin-bottom:22px;letter-spacing:-1.3px}
+
+/* ================================
+   TYPING EFFECT (H1)
+================================ */
+
+.hero h1.typing {
+  display: inline-block;
+  width: 14ch;                         /* tweak if text is clipped or has extra space */
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid currentColor; /* caret matches h1 color */
+  animation:
+    typing 2.2s steps(18) 0.4s both,    /* types the text */
+    blink .6s step-end infinite alternate, /* blinking caret */
+    hide-caret 0s 3.8s forwards;        /* caret disappears after ~3.8s */
+}
+
+@keyframes typing {
+  from { width: 0; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes hide-caret {
+  to {border-color: transparent; }
+}
+
+@media (max-width: 600px) {
+  .hero h1.typing { font-size: 28px; }
+}
+
 .hero p{font-size:17px;line-height:1.75;color:rgba(255,255,255,.95)}
 /* ================================
    SOCIAL BUTTONS
@@ -162,7 +204,9 @@ a{text-decoration:none;color:inherit}
 
 .linkedin {
     --btn-bg: #0077b5;
-    color: #fff;
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
 }
 
 .github {
@@ -454,4 +498,90 @@ footer{
 #contact:hover{
     color: white;
     font-weight: normal;
+}
+
+.white{
+    font-size: 20px;
+}
+
+.bx-education{
+    font-size: 28px;
+}
+
+/* ================================
+   RESUME BUTTON (WHITE + LIQUID METALLIC SHINE)
+================================ */
+
+.resume-btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  background: #fff;
+  color: #172b4d;
+  border-radius: 5px;
+  padding: 12px 19px;
+  margin-top: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition:
+    transform .35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow .35s ease;
+}
+
+/* soft colour pools behind the text */
+.resume-btn::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(22, 147, 238, .30), transparent 42%),
+    radial-gradient(circle at 78% 80%, rgba(122, 85, 215, .24), transparent 40%);
+  filter: blur(12px);
+  opacity: .55;
+  transition: transform .55s cubic-bezier(0.16, 1, 0.3, 1), opacity .3s ease;
+}
+
+/* tilted metallic streak */
+.resume-btn::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -30%;
+  width: 55%;
+  height: 160%;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(120, 135, 165, .28) 42%,
+    rgba(255, 255, 255, .95) 50%,
+    rgba(120, 135, 165, .28) 58%,
+    transparent 70%
+  );
+  transform: translateX(-120%) rotate(12deg);
+  transition: transform .65s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.resume-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 34px rgba(50, 50, 93, .22);
+}
+
+.resume-btn:hover::before {
+  transform: translate(8%, -6%) scale(1.15);
+  opacity: .85;
+}
+
+.resume-btn:hover::after {
+  transform: translateX(220%) rotate(12deg);
+}
+
+.resume-btn:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 4px 14px rgba(50, 50, 93, .18);
 }
